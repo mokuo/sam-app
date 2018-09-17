@@ -8,7 +8,7 @@ var event, context;
 
 describe('Tests index', function () {
     it('verifies successful response', async () => {
-        const result = await app.lambda_handler(event, context, (err, result) => {
+        const result = await app.lambdaHandler(event, context, (err, result) => {
             expect(result).to.be.an('object');
             expect(result.statusCode).to.equal(200);
             expect(result.body).to.be.an('string');
@@ -21,4 +21,3 @@ describe('Tests index', function () {
         });
     });
 });
-
